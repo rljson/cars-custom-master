@@ -1,0 +1,20 @@
+// @license
+// Copyright (c) rljson
+//
+// Use of this source code is governed by terms that can be
+// found in the LICENSE file in the root of this package.
+
+{
+  "name": "@rljson/cars-custom-master",
+  "summary": "Master of the custom side of the cars example app, where released catalogs are edited further for customers; so far an HTTP server with GET / and GET /api/hello (its greeting) and GET /health; runs as the container app ca-cars-custom-master-<stage>.",
+  "domain": [
+    "master of the custom side: later holds all data of the side, on @rljson/server",
+    "container cars-custom-master, Node, uid 1000, port 3000",
+  ],
+  "interfaces": {
+    "uses": {},
+    "usedBy": {
+      "cars-custom-client": "GET /api/hello over HTTP",
+    },
+  },
+}
