@@ -22,7 +22,7 @@ Master der Seite custom der cars-Beispiel-App, wo freigegebene Kataloge für Kun
   antwortet er mit dem Hello World: `GET /`, `GET /api/hello` und
   `GET /health`
 - Er läuft als Container App `ca-cars-custom-master-<stage>` in den Stufen `dev`,
-  `stage` und `prod`
+  `test` und `prod`
 
 ## Installation
 

@@ -20,7 +20,7 @@ Master of the custom side of the cars example app, where released catalogs are e
 - Later it holds all data of its side on `@rljson/server`; for now it
   answers the hello world: `GET /`, `GET /api/hello` and `GET /health`
 - It runs as the container app `ca-cars-custom-master-<stage>` in the stages `dev`,
-  `stage` and `prod`
+  `test` and `prod`
 
 ## Installation
 
