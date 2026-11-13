@@ -21,8 +21,9 @@ Master der Seite custom der cars-Beispiel-App, wo freigegebene Kataloge für Kun
 - Später hält er alle Daten seiner Seite auf `@rljson/server`; vorerst
   antwortet er mit dem Hello World: `GET /`, `GET /api/hello` und
   `GET /health`
-- Er läuft als Container App `ca-cars-custom-master-<stage>` in den Stufen `dev`,
-  `test` und `prod`
+- Er läuft als Container in den Stufen `dev`, `test` und `prod`, auch
+  hinter einem Proxy, der ihn unter einem Pfad ausliefert und dieses
+  Präfix entfernt
 
 ## Installation
 
@@ -47,10 +48,10 @@ await start({ PORT: '3000' });
 
 ### Container
 
-Das Image in der Registry der Stufe `dev` bauen:
+Das Image in der Registry `crcars` bauen, getaggt mit der Version:
 
 ```bash
-az acr build --registry crcarsdev --image cars-custom-master:<version>-<sha> .
+az acr build --registry crcars --image cars-custom-master:<version> .
 ```
 
 ## Grenzen

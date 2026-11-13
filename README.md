@@ -19,8 +19,8 @@ Master of the custom side of the cars example app, where released catalogs are e
 - The custom side of the cars example app runs its own master, where released catalogs are edited further for customers
 - Later it holds all data of its side on `@rljson/server`; for now it
   answers the hello world: `GET /`, `GET /api/hello` and `GET /health`
-- It runs as the container app `ca-cars-custom-master-<stage>` in the stages `dev`,
-  `test` and `prod`
+- It runs as a container in the stages `dev`, `test` and `prod`, also
+  behind a proxy that serves it under a path and strips that prefix
 
 ## Installation
 
@@ -45,10 +45,10 @@ await start({ PORT: '3000' });
 
 ### Container
 
-Build the image in the registry of the stage `dev`:
+Build the image in the registry `crcars`, tagged with the version:
 
 ```bash
-az acr build --registry crcarsdev --image cars-custom-master:<version>-<sha> .
+az acr build --registry crcars --image cars-custom-master:<version> .
 ```
 
 ## Limitations
